@@ -557,43 +557,43 @@ PHA 0 0 0 1 0 0 1 0 = $12
 RTI
 
 ; Pinout (NMOS 6502)
-Pin 1: Vss (Ground)
-Pin 2: RDY (Ready)
-Pin 3: OUT (Output)
-Pin 4: IRQ (Interrupt Request)
-Pin 5: N.C. (Not Connected)
-Pin 6: NMI (Non-Maskable Interrupt)
-Pin 7: SYNC (Synchronize)
-Pin 8: Vcc (+5V)
-Pin 9: AB0 (Address Bus Bit 0)
-Pin 10: AB1 (Address Bus Bit 1)
-Pin 11: AB2 (Address Bus Bit 2)
-Pin 12: AB3 (Address Bus Bit 3)
-Pin 13: AB4 (Address Bus Bit 4)
-Pin 14: AB5 (Address Bus Bit 5)
-Pin 15: AB6 (Address Bus Bit 6)
-Pin 16: AB7 (Address Bus Bit 7)
-Pin 17: AB8 (Address Bus Bit 8)
-Pin 18: AB9 (Address Bus Bit 9)
-Pin 19: AB10 (Address Bus Bit 10)
-Pin 20: AB11 (Address Bus Bit 11)
-Pin 21: Vss (Ground)
-Pin 22: AB12 (Address Bus Bit 12)
-Pin 23: AB13 (Address Bus Bit 13)
-Pin 24: AB14 (Address Bus Bit 14)
-Pin 25: AB15 (Address Bus Bit 15)
-Pin 26: DB7 (Data Bus Bit 7)
-Pin 27: DB6 (Data Bus Bit 6)
-Pin 28: DB5 (Data Bus Bit 5)
-Pin 29: DB4 (Data Bus Bit 4)
-Pin 30: DB3 (Data Bus Bit 3)
-Pin 31: DB2 (Data Bus Bit 2)
-Pin 32: DB1 (Data Bus Bit 1)
-Pin 33: DB0 (Data Bus Bit 0)
-Pin 34: R/W (Read/Write)
-Pin 35: N.C. (Not Connected)
-Pin 36: N.C. (Not Connected)
-Pin 37: IN (Input)
-Pin 38: S.O. (Set Overflow)
-Pin 39: OUT (Output)
-Pin 40: RES (Reset)
+Pin 1: Vss    ; Ground
+Pin 2: RDY    ; Ready
+Pin 3: OUT    ; Output
+Pin 4: IRQ    ; Interrupt Request
+Pin 5: N.C.   ; Not Connected)
+Pin 6: NMI    ; Non-Maskable Interrupt
+Pin 7: SYNC   ; Synchronize
+Pin 8: Vcc    ; +5V
+Pin 9: AB0    ; Address Bus Bit 0
+Pin 10: AB1   ; Address Bus Bit 1
+Pin 11: AB2   ; Address Bus Bit 2
+Pin 12: AB3   ; Address Bus Bit 3
+Pin 13: AB4   ; Address Bus Bit 4
+Pin 14: AB5   ; Address Bus Bit 5
+Pin 15: AB6   ; Address Bus Bit 6
+Pin 16: AB7   ; Address Bus Bit 7
+Pin 17: AB8   ; Address Bus Bit 8
+Pin 18: AB9   ; Address Bus Bit 9
+Pin 19: AB10  ; Address Bus Bit 10
+Pin 20: AB11  ; Address Bus Bit 11
+Pin 21: Vss   ; Ground
+Pin 22: AB12  ; Address Bus Bit 12
+Pin 23: AB13  ; Address Bus Bit 13
+Pin 24: AB14  ; Address Bus Bit 14
+Pin 25: AB15  ; Address Bus Bit 15
+Pin 26: DB7   ; Data Bus Bit 7
+Pin 27: DB6   ; Data Bus Bit 6
+Pin 28: DB5   ; Data Bus Bit 5
+Pin 29: DB4   ; Data Bus Bit 4
+Pin 30: DB3   ; Data Bus Bit 3
+Pin 31: DB2   ; Data Bus Bit 2
+Pin 32: DB1   ; Data Bus Bit 1
+Pin 33: DB0   ; Data Bus Bit 0
+Pin 34: R/W   ; Read/Write
+Pin 35: N.C.  ; Not Connected
+Pin 36: N.C.  ; Not Connected
+Pin 37: IN    ; Input
+Pin 38: S.O.  ; Set Overflow
+Pin 39: OUT   ; Output
+Pin 40: RES   ; Reset
