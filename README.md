@@ -11,3 +11,4 @@ So, because of these reasons, this 6502 microprocessor emulator aims to do the f
 1 - High instruction accuracy at a low level.
 2 - Contribute to video game preservation.
 3 - Be used as an educational tool for emulator developers.
+4 - Increase portability by being contained in a singular assembly script.
