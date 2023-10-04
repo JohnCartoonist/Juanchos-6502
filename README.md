@@ -12,3 +12,5 @@ So, because of these reasons, this 6502 microprocessor emulator aims to do the f
 2 - Contribute to video game preservation.
 3 - Be used as an educational tool for emulator developers.
 4 - Increase portability by being contained within a singular assembly script.
+
+Here is the documentation used to create this 6502 microprocessor emulator: https://www.masswerk.at/6502/6502_instruction_set.html
