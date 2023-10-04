@@ -534,7 +534,7 @@ $FFFA-$FFFB   ; NMI (Non-Maskable Interrupt) vector
 $FFFC-$FFFD   ; RES (Reset) vector
 $FFFE-$FFFF   ; IRQ (Interrupt Request) vector
 
-; The Break Flag And the Stack
+; The Break Flag And The Stack
 ; Bits 4 and 5 will always be ignored.
 ; Bit 1
 PHP 0 0 1 1 0 0 1 1 = $33
