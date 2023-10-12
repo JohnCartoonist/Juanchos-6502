@@ -4,7 +4,7 @@ The MOS Technology 6502 is an 8-bit microprocessor that was designed by a small 
 The mission of this emulator is to reproduce the 6502 microprocessor's instructions in 6502 assembly. This emulator provides the following:
 
 - Cycle-based emulation of all official 6502 instructions.
-- Cycle-based emulation of all illegal 6502 opcodes.
+- Cycle-based emulation of all illegal 6502 opcodes (expect for JAM).
 - Emulation of all documented addressing modes.
 - Emulation of arithmetic operations.
 - Emulation of 16-bit additions.
