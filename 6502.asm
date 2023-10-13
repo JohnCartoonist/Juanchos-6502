@@ -1,18 +1,4 @@
 ; Address Modes
-OPC A	      ; Operand is AC (implied single byte instruction)
-OPC $LLHH	  ; Operand is address $HHLL
-OPC $LLHH,X	  ; Operand is address; effective address is address incremented by X with carry
-OPC $LLHH,Y	  ; Operand is address; effective address is address incremented by Y with carry
-OPC #$BB	  ; Operand is byte BB
-OPC	          ; Operand implied
-OPC ($LLHH)	  ; Operand is address; effective address is contents of word at address: C.w($HHLL)
-OPC ($LL,X)	  ; Operand is zeropage address; effective address is word in (LL + X, LL + X + 1), inc. without carry: C.w($00LL + X)
-OPC ($LL),Y	  ; Operand is zeropage address; effective address is word in (LL, LL + 1) incremented by Y with carry: C.w($00LL) + Y
-OPC $BB	      ; Branch target is PC + signed offset BB
-OPC $LL	      ; Operand is zeropage address (hi-byte is zero, address = $00LL)
-OPC $LL,X	  ; Operand is zeropage address; effective address is address incremented by X without carry
-OPC $LL,Y	  ; Operand is zeropage address; effective address is address incremented by Y without carry
-
 ; Implied Addressing
 CLC           ; Clear the carry flag
 ROL A         ; Rotate contents of accumulator left by one position
@@ -1482,6 +1468,44 @@ ADC #$14      ; Accumulator now holds $42
 $FFFA-$FFFB   ; NMI (Non-Maskable Interrupt) vector
 $FFFC-$FFFD   ; RES (Reset) vector
 $FFFE-$FFFF   ; IRQ (Interrupt Request) vector
+
+; IRQ, NMI, RTI, BRK Operation
+01 0E                  ; SP after IRQ or NMI but before RTI
+01 0F STATUS ·
+01 10 PCL $02
+01 11 PCH $03          ; SP before IRQ or NMI and after RTI
+01 12     STACK
+
+03 00                  ; PC at time of IRQ or NMI · this instruction will complete before interrupt is serviced
+03 01
+03 02                  ; PC after RTI
+
+04 05 ·                ; Interrupt service main body
+04 06 ·
+04 07 RTI $40          ; Return to interrupt
+
+FF FA ADL              ; NMI vector
+FF FB ADH              ; NMI vector
+FF FC ADL              ; RES vector
+FF FD ADH              ; RES vector
+FF FE ADL $05          ; IRQ vector
+FF FF ADH $04          ; IRQ vector
+
+; JSR, RTS Operation
+01 0E                  ; SP after JSR but before return (RTS)
+01 0F PCL $02
+01 10 PCH $03          ; SP before JSR and after return (RTS) from subroutine
+01 11     STACK
+
+03 00 JSR $20          ; Jump to subroutine
+03 01 ADL $05
+03 02 ADH $04
+03 03                  ; Return from subroutine to this location
+
+04 05 ·                ; Subroutine main body
+04 06 ·
+04 07 ·
+04 08 RTS $60          ; Return from subroutine
 
 ; The Break Flag and The Stack
 ; Bits 4 and 5 will always be ignored.
