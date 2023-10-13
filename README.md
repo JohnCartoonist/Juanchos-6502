@@ -18,8 +18,8 @@ The mission of this emulator is to reproduce the 6502 microprocessor's instructi
 - Emulation of the power-up state and reset state.
 
 This 6502 microprocessor emulator is not 100% cycle-accurate. My implementation of cycle counting is rather barebones and even though it does take additional cycles into account, it never goes farther than:
-CYCLES [insert 6502 instruction + addressing mode] = Number of cycles
-CYCLES [insert 6502 instruction + addressing mode] [imply this is either a page boundary cross of branch] = Number of cycles
-Because of the simplistic nature of my approach, this emulator may not be able to handle all hardware edge cases. It may get the job done for most programs/games, but don't expect it to run everything flawlessly.
 
-Here is the documentation used to create this 6502 microprocessor emulator: https://www.masswerk.at/6502/6502_instruction_set.html
+- CYCLES [insert 6502 instruction + addressing mode] = Number of cycles
+- CYCLES [insert 6502 instruction + addressing mode] [imply this is either a page boundary cross of branch] = Number of cycles
+
+Because of the simplistic nature of my approach, this emulator may not be able to handle all hardware edge cases. It may get the job done for most programs/games, but don't expect it to run everything flawlessly. Here is the documentation used to create this 6502 microprocessor emulator: https://www.masswerk.at/6502/6502_instruction_set.html
