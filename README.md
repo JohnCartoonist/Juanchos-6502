@@ -1,7 +1,7 @@
 # Juanchos-6502
 The MOS Technology 6502 is an 8-bit microprocessor that was designed by a small team led by Chuck Peddle for MOS Technology. The design team had formerly worked at Motorola on the Motorola 6800 project; the 6502 is essentially a simplified, less expensive and faster version of that design.
 
-The mission of this emulator is to reproduce the MOS 6502 instructions in 6502 assembly for the purposes of video game preservation. This emulator provides the following:
+The mission of this emulator is to reproduce the MOS 6502's instructions in 6502 assembly for the purposes of video game preservation. This emulator provides the following:
 
 - Cycle-based emulation of all official 6502 instructions.
 - Cycle-based emulation of all illegal 6502 opcodes (expect for JAM).
