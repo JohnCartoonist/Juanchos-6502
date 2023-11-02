@@ -1463,7 +1463,7 @@ STA $1005     ; Store high byte of result (result in $1004 and $1005)
 -512 = %1111.1110.0000.0000 = $FE $00
 -516 = %1111.1101.1111.1100 = $FD $FC
 
-; Flags With ADC And SBC
+; Flags With ADC and SBC
 LDA #$40
 ADC #$40
 
