@@ -1555,6 +1555,8 @@ FF FF ADH $04          ; IRQ vector
 ; The Break Flag and The Stack
 ; Bits 4 and 5 will always be ignored, when transferred to the status register.
 ; Bit 1
+SR: N V - B D I Z C
+    0 0 - - 0 0 1 1
 PHP 0 0 1 1 0 0 1 1 = $33
 PLP 0 0 - - 0 0 1 1 = $03
 PLA 0 0 1 1 0 0 1 1 = $33
