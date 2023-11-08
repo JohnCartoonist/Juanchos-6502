@@ -1553,7 +1553,7 @@ FF FF ADH $04          ; IRQ vector
 04 08 RTS $60          ; Return from subroutine
 
 ; The Break Flag and The Stack
-; Bits 5 and 4 will always be ignored, when transferred to the status register.
+; Bits 4 and 5 will always be ignored, when transferred to the status register.
 ; Bit 1
 PHP 0 0 1 1 0 0 1 1 = $33
 PLP 0 0 - - 0 0 1 1 = $03
