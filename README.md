@@ -14,7 +14,7 @@ The purpose of this emulator is to provide documentation of the MOS 6502 for emu
 - Emulation of decimal mode (BCD).
 - Emulation of jump vectors and stack operations.
 - Emulation of the break flag and the stack.
-- Some implementation of the 6502's pinout.
+- Implementation of the 6502's pinout.
 - Emulation of the power-up state and reset state.
 
 This MOS 6502 emulator is not 100% cycle-accurate. My implementation of cycle counting is rather barebones and even though it does take additional cycles into account, it never goes farther than:
