@@ -20,20 +20,6 @@
 ; For reference, here is the documentation I've utilized in order to write this emulator: https://www.masswerk.at/6502/6502_instruction_set.html
 
 ; Address Modes
-OPC A         ; Operand is AC (implied single byte instruction)
-OPC $LLHH	  ; Operand is address $HHLL
-OPC $LLHH,X	  ; Operand is address; effective address is address incremented by X with carry
-OPC $LLHH,Y	  ; Operand is address; effective address is address incremented by Y with carry
-OPC #$BB	  ; Operand is byte BB
-OPC	          ; Operand implied
-OPC ($LLHH)	  ; Operand is address; effective address is contents of word at address: C.w($HHLL)
-OPC ($LL,X)	  ; Operand is zeropage address; effective address is word in (LL + X, LL + X + 1), inc. without carry: C.w($00LL + X)
-OPC ($LL),Y	  ; Operand is zeropage address; effective address is word in (LL, LL + 1) incremented by Y with carry: C.w($00LL) + Y
-OPC $BB	      ; Branch target is PC + signed offset BB
-OPC $LL	      ; Operand is zeropage address (hi-byte is zero, address = $00LL)
-OPC $LL,X	  ; Operand is zeropage address; effective address is address incremented by X without carry
-OPC $LL,Y	  ; Operand is zeropage address; effective address is address incremented by Y without carry
-
 ; Implied Addressing
 CLC           ; Clear the carry flag
 ROL A         ; Rotate contents of accumulator left by one position
